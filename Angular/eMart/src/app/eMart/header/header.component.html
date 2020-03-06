@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-light bg-warning  ">
+    
+        <h2 class="text-dark">eMart</h2>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse-nav-bar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapse-nav-bar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="!getLoggedIn()">
+                    <a class="nav-link  text-dark" routerLink="/login">Login</a>
+                </li>
+                <li class="nav-item" *ngIf="getLoggedIn()">
+                    <a class="nav-link  text-dark" routerLink="/item-list">Item List</a>
+                </li>
+                <li class="nav-item" *ngIf="getLoggedIn()">
+                    <a class="nav-link  text-dark" routerLink="/cart-list">Cart</a>
+                </li>
+                <li class="nav-item" *ngIf="getLoggedIn()">
+                    <a class="nav-link  text-dark" routerLink="/bill-list">Purchase History</a>
+                </li>
+                <li class="nav-item" *ngIf="getLoggedIn()">
+                    <a class="nav-link  text-dark" routerLink="/login">Logout</a>
+                </li>
+            </ul>
+        </div>
+      </nav>
